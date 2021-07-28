@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'home.dart';
 
 class Login extends StatefulWidget {
@@ -52,26 +51,31 @@ class _LoginState extends State<Login> {
                   children: <Widget>[
                     Container(
                       child: TextFormField(
-                          validator: (input) {
-                            if (input!.isEmpty) return 'Enter Email';
-                          },
-                          decoration: InputDecoration(
-                              labelText: 'Email',
-                              prefixIcon: Icon(Icons.email)),
-                          onSaved: (input) => _email = input),
+                        validator: (input) {
+                          if (input!.isEmpty) return 'Enter Email';
+                        },
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          prefixIcon: Icon(Icons.email),
+                        ),
+                        onSaved: (input) => _email = input,
+                      ),
                     ),
                     Container(
                       child: TextFormField(
-                          validator: (input) {
-                            if (input!.length < 6)
-                              return 'Provide Minimum 6 Character';
-                          },
-                          decoration: InputDecoration(
-                            labelText: 'Password',
-                            prefixIcon: Icon(Icons.lock),
+                        validator: (input) {
+                          if (input!.length < 6)
+                            return 'Provide Minimum 6 Character';
+                        },
+                        decoration: InputDecoration(
+                          labelText: 'Password',
+                          prefixIcon: Icon(
+                            Icons.lock,
                           ),
-                          obscureText: true,
-                          onSaved: (input) => _password = input),
+                        ),
+                        obscureText: true,
+                        onSaved: (input) => _password = input,
+                      ),
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
