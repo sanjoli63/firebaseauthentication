@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class Start extends StatefulWidget {
   @override
@@ -53,6 +54,7 @@ class _StartState extends State<Start> {
               style: TextStyle(color: Colors.black),
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 ElevatedButton(
                   onPressed: () {},
@@ -65,6 +67,11 @@ class _StartState extends State<Start> {
                     ),
                   ),
                   style: ButtonStyle(
+                    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        EdgeInsets.only(
+                      left: 30,
+                      right: 30,
+                    )),
                     backgroundColor:
                         MaterialStateProperty.all<Color>(Colors.orange),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -77,6 +84,9 @@ class _StartState extends State<Start> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: 20,
+                ),
                 ElevatedButton(
                   onPressed: () {},
                   child: Text(
@@ -88,6 +98,11 @@ class _StartState extends State<Start> {
                     ),
                   ),
                   style: ButtonStyle(
+                    padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        EdgeInsets.only(
+                      left: 30,
+                      right: 30,
+                    )),
                     backgroundColor:
                         MaterialStateProperty.all<Color>(Colors.orange),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -101,6 +116,14 @@ class _StartState extends State<Start> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            SignInButton(
+              Buttons.Google,
+              text: "Sign up with Google",
+              onPressed: () {},
             )
           ],
         ),

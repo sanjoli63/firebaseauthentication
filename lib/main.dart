@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.orange,
       ),
+      debugShowCheckedModeBanner: false,
       home: Start(),
     );
   }
