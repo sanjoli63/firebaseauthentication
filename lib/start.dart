@@ -12,14 +12,22 @@ class _StartState extends State<Start> {
       body: Container(
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 35,
+            ),
             Container(
+              height: 400,
               child: Image(
                 image: AssetImage("assets/images/welcome.jpg"),
+                fit: BoxFit.contain,
               ),
+            ),
+            SizedBox(
+              height: 20,
             ),
             RichText(
               text: TextSpan(
-                text: 'Welcome to',
+                text: 'Welcome to ',
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -37,10 +45,63 @@ class _StartState extends State<Start> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               'Fresh Groceries Delivered at your Doorstep',
               style: TextStyle(color: Colors.black),
             ),
+            Row(
+              children: <Widget>[
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'LOGIN',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.orange),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    'REGISTER',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.orange),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            )
           ],
         ),
       ),
