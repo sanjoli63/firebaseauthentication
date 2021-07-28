@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'start.dart';
+// import 'start.dart';
+import 'login.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.orange,
       ),
       debugShowCheckedModeBanner: false,
-      home: Start(),
+      home: Login(),
     );
   }
 }
