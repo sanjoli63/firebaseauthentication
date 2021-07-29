@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'login.dart';
-import 'signup.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class Start extends StatefulWidget {
@@ -54,26 +52,28 @@ class _StartState extends State<Start> {
             Container(
               height: 400,
               child: Image(
-                image: AssetImage("images/start.jpg"),
+                image: AssetImage("assets/images/start.jpg"),
                 fit: BoxFit.contain,
               ),
             ),
             SizedBox(height: 20),
             RichText(
-                text: TextSpan(
-                    text: 'Welcome to ',
-                    style: TextStyle(
-                        fontSize: 25.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black),
-                    children: <TextSpan>[
+              text: TextSpan(
+                text: 'Welcome to ',
+                style: TextStyle(
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black),
+                children: <TextSpan>[
                   TextSpan(
                       text: 'X Groceries',
                       style: TextStyle(
                           fontSize: 30.0,
                           fontWeight: FontWeight.bold,
                           color: Colors.orange))
-                ])),
+                ],
+              ),
+            ),
             SizedBox(height: 10.0),
             Text(
               'Fresh Groceries Delivered at your Doorstep',

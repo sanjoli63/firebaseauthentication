@@ -36,20 +36,20 @@ class _LoginState extends State<Login> {
       try {
         await _auth.signInWithEmailAndPassword(
             email: _email!, password: _password!);
-      } catch (e) {
-        showError();
+      } on FirebaseAuthException catch (e) {
+        showError(e.message);
         print(e);
       }
     }
   }
 
-  showError() {
+  showError(String? errormessage) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('ERROR'),
-            content: Text('Email is badly formatted'),
+            content: Text(errormessage!),
             actions: <Widget>[
               TextButton(
                   onPressed: () {
@@ -75,7 +75,7 @@ class _LoginState extends State<Login> {
               Container(
                 height: 400,
                 child: Image(
-                  image: AssetImage("images/login.jpg"),
+                  image: AssetImage("assets/images/login.jpg"),
                   fit: BoxFit.contain,
                 ),
               ),

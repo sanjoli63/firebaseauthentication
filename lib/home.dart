@@ -1,4 +1,3 @@
-import 'start.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -60,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   height: 300,
                   child: Image(
-                    image: AssetImage("images/welcome.jpg"),
+                    image: AssetImage("assets/images/welcome.jpg"),
                     fit: BoxFit.contain,
                   ),
                 ),
